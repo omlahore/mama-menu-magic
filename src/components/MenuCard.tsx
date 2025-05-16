@@ -2,6 +2,7 @@
 import { MenuItem } from "../data/menuData";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 interface MenuCardProps {
   item: MenuItem;
@@ -44,10 +45,23 @@ const MenuCard = ({ item, index }: MenuCardProps) => {
         <h3 className="text-xl font-semibold mb-2 group-hover:text-mama-primary transition-colors">{item.name}</h3>
         <p className="text-mama-text/80 mb-4 text-sm min-h-[40px]">{item.description}</p>
         
-        <div className="mt-auto">
-          <p className="menu-price">{item.price}</p>
+        <div className="mt-auto flex flex-col gap-2">
+          <Button 
+            variant="outline" 
+            size="sm"
+            className="price-pill bg-mama-primary/10 text-mama-accent hover:bg-mama-primary/20 border-mama-primary/30"
+          >
+            {item.price}
+          </Button>
+          
           {item.priceWithChai && (
-            <p className="menu-price-option">{item.priceWithChai}</p>
+            <Button 
+              variant="outline" 
+              size="sm"
+              className="price-pill bg-mama-secondary/50 text-mama-text/90 hover:bg-mama-secondary/80 border-mama-secondary"
+            >
+              {item.priceWithChai}
+            </Button>
           )}
         </div>
       </div>
