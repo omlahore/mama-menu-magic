@@ -69,21 +69,21 @@ const MenuBoard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-mama-background to-mama-secondary/20">
-      {/* Hero Section */}
-      <header className="relative bg-gradient-to-r from-mama-accent/90 to-mama-primary/90 py-12 shadow-lg sticky top-0 z-10 overflow-hidden">
+      {/* Hero Section - Updated with softer background */}
+      <header className="relative bg-gradient-to-r from-[#F8F5F2] to-[#F2F0EB] py-12 shadow-lg overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-subtle-pattern opacity-10"></div>
         
         {/* Hero Content */}
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-playfair tracking-wide mb-2 drop-shadow-md">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl text-mama-accent font-playfair tracking-wide mb-2 drop-shadow-md">
               Mama's Kitchen
             </h1>
-            <p className="text-lg md:text-xl text-white/90 mt-2 font-lato tracking-wider">
+            <p className="text-lg md:text-xl text-mama-primary mt-2 font-lato tracking-wider">
               Digital Menu Board
             </p>
-            <p className="text-sm text-white/70 mt-4 max-w-md mx-auto">
+            <p className="text-sm text-mama-text/70 mt-4 max-w-md mx-auto">
               Tap a category to explore our menu
             </p>
           </div>
@@ -91,9 +91,9 @@ const MenuBoard = () => {
           {/* "Special of the Moment" Marquee */}
           <div className="mt-6 py-3 bg-white/20 backdrop-blur-sm rounded-lg overflow-hidden">
             <div className="flex items-center justify-center animate-slide-in">
-              <span className="font-semibold mr-2 text-white/90">Today's Special:</span> 
-              <span className="text-white font-semibold">{specialItem.name}</span> - 
-              <span className="ml-2 italic text-white/90">{specialItem.price}</span>
+              <span className="font-semibold mr-2 text-mama-text/90">Today's Special:</span> 
+              <span className="text-mama-accent font-semibold">{specialItem.name}</span> - 
+              <span className="ml-2 italic text-mama-text/90">{specialItem.price}</span>
             </div>
           </div>
         </div>

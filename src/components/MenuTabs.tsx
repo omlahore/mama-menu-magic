@@ -8,14 +8,14 @@ interface MenuTabsProps {
 
 const MenuTabs = ({ activeCategory, setActiveCategory }: MenuTabsProps) => {
   return (
-    <div className="border-b border-mama-secondary mb-8 sticky top-[116px] bg-white/90 backdrop-blur-sm z-10">
+    <div className="border-b border-mama-secondary mb-2">
       <div className="container mx-auto px-4">
-        <div className="flex space-x-2 overflow-x-auto pb-1 scrollbar-hide">
+        <div className="flex justify-center space-x-6 overflow-x-auto pb-1 scrollbar-hide">
           {menuCategories.map((category) => (
             <div
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`menu-tab transition-all duration-300 ${
+              className={`menu-tab text-xl font-bold transition-all duration-300 px-6 py-3 ${
                 activeCategory === category.id ? 'menu-tab-active' : 'menu-tab-inactive'
               }`}
             >
@@ -27,9 +27,11 @@ const MenuTabs = ({ activeCategory, setActiveCategory }: MenuTabsProps) => {
           ))}
         </div>
         
-        {/* Category description */}
-        <div className="py-2 text-sm text-mama-text/70 italic">
-          {menuCategories.find((cat) => cat.id === activeCategory)?.description}
+        {/* Category description - larger & bolder */}
+        <div className="py-4 text-center">
+          <p className="text-lg font-bold text-mama-text/90">
+            {menuCategories.find((cat) => cat.id === activeCategory)?.description}
+          </p>
         </div>
       </div>
     </div>

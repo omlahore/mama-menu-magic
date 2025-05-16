@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
 
 @tailwind base;
@@ -109,16 +110,18 @@
   }
 
   .menu-tab-active {
-    @apply text-mama-primary font-semibold;
+    @apply text-mama-primary font-bold;
   }
 
   .menu-tab-inactive {
-    @apply text-mama-text/70 hover:text-mama-text;
+    @apply text-mama-text/70 hover:text-mama-text transition-colors duration-300;
   }
 
   .tab-indicator {
     @apply absolute -bottom-[2px] left-0 w-full h-[2px] bg-mama-primary;
-    animation: slide-in 0.3s ease-out forwards;
+    /* Updated animation to grow from center outward */
+    animation: tab-indicator-in 0.3s ease-out forwards;
+    transform-origin: center;
   }
 
   .menu-card {
@@ -152,7 +155,7 @@
     perspective: 1000px;
   }
 
-  /* New styles for price pills */
+  /* Price pills */
   .price-pill {
     @apply rounded-full font-medium text-center transition-all duration-300 hover:scale-105 active:scale-95;
     box-shadow: 0 2px 5px rgba(0,0,0,0.08);
@@ -160,6 +163,18 @@
 }
 
 @keyframes slide-in {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+/* New animation for tab indicator growing from center */
+@keyframes tab-indicator-in {
   0% {
     transform: scaleX(0);
     opacity: 0;
