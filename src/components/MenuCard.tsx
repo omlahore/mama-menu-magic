@@ -11,6 +11,7 @@ interface MenuCardProps {
 
 const MenuCard = ({ item, index }: MenuCardProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   return (
     <div 
@@ -24,8 +25,8 @@ const MenuCard = ({ item, index }: MenuCardProps) => {
         "opacity-0 animate-[fade-in_0.4s_0.4s_forwards]"
       )}
     >
-      <div className="relative overflow-hidden">
-        {!imageLoaded && (
+      <div className="relative overflow-hidden h-48">
+        {!imageLoaded && !imageError && (
           <div className="absolute inset-0 flex items-center justify-center bg-mama-secondary/50">
             <div className="w-6 h-6 border-2 border-mama-primary border-t-transparent rounded-full animate-spin"></div>
           </div>
@@ -34,12 +35,23 @@ const MenuCard = ({ item, index }: MenuCardProps) => {
           src={item.image} 
           alt={item.name}
           className={cn(
-            "menu-card-image transition-all duration-500 group-hover:scale-110",
+            "menu-card-image transition-all duration-500 group-hover:scale-110 object-cover w-full h-full",
             !imageLoaded && "opacity-0"
           )}
           loading="lazy"
           onLoad={() => setImageLoaded(true)}
+          onError={() => {
+            setImageError(true);
+            setImageLoaded(true);
+          }}
         />
+        {imageError && (
+          <div className="absolute inset-0 flex items-center justify-center bg-mama-secondary/30 text-mama-text">
+            <div className="text-center p-4">
+              <p className="font-medium">{item.name}</p>
+            </div>
+          </div>
+        )}
       </div>
       <div className="p-4">
         <h3 className="text-xl font-semibold mb-2 group-hover:text-mama-primary transition-colors">{item.name}</h3>

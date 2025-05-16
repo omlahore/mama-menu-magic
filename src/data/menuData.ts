@@ -1,4 +1,3 @@
-
 export interface MenuItem {
   id: number;
   name: string;
@@ -11,7 +10,7 @@ export interface MenuItem {
 
 export const menuCategories = [
   { id: "breakfast", name: "Breakfast", description: "Served 7 am–11 am" },
-  { id: "lunch", name: "Lunch", description: "Coming soon" },
+  { id: "lunch", name: "Lunch", description: "Main Menu (Served from 11 am – 5 pm)" },
   { id: "drinks", name: "Drinks", description: "Coming soon" },
 ];
 
@@ -104,5 +103,199 @@ export const menuItems: MenuItem[] = [
     price: "₹15",
     image: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?q=80&w=1600&auto=format&fit=crop",
     category: "breakfast",
+  },
+  
+  // Lunch Menu - Chaat Section
+  {
+    id: 11,
+    name: "Dahi Puri / Pani Puri",
+    description: "Puffed puri filled with tamarind chutney, chickpea and potato topped with sweet yoghurt and sev (V)",
+    price: "₹28",
+    image: "https://images.unsplash.com/photo-1606851094291-6efae152bb87?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 12,
+    name: "Avocado Papri Chaat",
+    description: "Crisp flat puri topped with smashed avo, mango relish and tamarind chutney (V)",
+    price: "₹35",
+    image: "https://images.unsplash.com/photo-1567465645848-d9c40b76b5bd?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 13,
+    name: "Aloo Tikki Chaat",
+    description: "Spiced potato cutlet, topped on yoghurt, mint sauce and tamarind chutney (V)",
+    price: "₹35",
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 14,
+    name: "Smash Samosa Chaat",
+    description: "Smashed Punjabi potato samosa with chutneys and yoghurt (V)",
+    price: "₹25",
+    image: "https://images.unsplash.com/photo-1607103058027-4c8a70a03e3a?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 15,
+    name: "Spinach Crunch Chaat",
+    description: "Crunchy spinach with chopped tomato, pomegranate, crispy Bombay sev, finished with our tamarind & sweet yoghurt",
+    price: "₹35",
+    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  
+  // Lunch Menu - Bites Section
+  {
+    id: 16,
+    name: "Chicken Mirchi Burger and Fries",
+    description: "Marinated buttermilk premium chicken breast, dipped in chilli oil and finished with a zingy herby salad, plus fries",
+    price: "₹48",
+    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 17,
+    name: "Butter Chicken Fries",
+    description: "Fries topped with our signature butter-chicken sauce (V)",
+    price: "₹45",
+    image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 18,
+    name: "Chicken Crunch Samosa",
+    description: "Crunchy samosa filled with chicken, mixed capsicum and cheese (3 pieces)",
+    price: "₹35",
+    image: "https://images.unsplash.com/photo-1642278991158-a79a27e93bd9?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 19,
+    name: "Punjabi Potato Samosa",
+    description: "Handmade pastry filled with spiced potato and pea (4 pieces)",
+    price: "₹30",
+    image: "https://images.unsplash.com/photo-1502055774017-46bcd284abac?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 20,
+    name: "Crunch Chicken Sticks",
+    description: "Skewers of our marinated fried chicken (5 pieces)",
+    price: "₹35",
+    image: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 21,
+    name: "Cheese & Fresh Herb Paratha",
+    description: "Crisp paratha with a blend of fresh herbs, green chilli and three cheeses",
+    price: "₹25",
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 22,
+    name: "Masala Fries",
+    description: "Fries tossed in our masala seasoning, served with tomato-relish chutney (V)",
+    price: "₹20",
+    image: "https://images.unsplash.com/photo-1606851094291-6efae152bb87?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  
+  // Lunch Menu - Mains Section
+  {
+    id: 23,
+    name: "Boombastic Biryani",
+    description: "Our signature lamb/chicken biryani layered with rice and spices. Served with raita",
+    price: "₹55",
+    image: "https://images.unsplash.com/photo-1567465645848-d9c40b76b5bd?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 24,
+    name: "Butter Chicken Rice Bowl",
+    description: "Butter chicken, lightly spiced and served with rice and raita (V)",
+    price: "₹55",
+    image: "https://images.unsplash.com/photo-1607103058027-4c8a70a03e3a?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 25,
+    name: "Masala Meat Bowl",
+    description: "Slow-cooked lamb in rich masala, served with rice and beet garnish",
+    price: "₹55",
+    image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 26,
+    name: "Dhal Makhni Rice Bowl",
+    description: "Overnight-cooked black dhal served with rice and raita (V)",
+    price: "₹50",
+    image: "https://images.unsplash.com/photo-1642278991158-a79a27e93bd9?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 27,
+    name: "Daily Special",
+    description: "Ask for details of today's special",
+    price: "₹55",
+    image: "https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 28,
+    name: "Dhal Tadka Rice Bowl",
+    description: "Yellow lentils slow-cooked with aromatic spices and daily veg side",
+    price: "₹50",
+    image: "https://images.unsplash.com/photo-1502055774017-46bcd284abac?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 29,
+    name: "Goan Prawn Curry",
+    description: "Lightly spiced prawns in coconut milk sauce, tempered with mustard & Goan spices",
+    price: "₹65",
+    image: "https://images.unsplash.com/photo-1577968897966-3d4325b36b61?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  
+  // Lunch Menu - Wraps & Toasties Section
+  {
+    id: 30,
+    name: "Bombay Cheese Toastie",
+    description: "Mixed paneer and cheese with mint chutney, toasted on artisan sourdough",
+    price: "₹35",
+    priceWithChai: "₹45 with fries",
+    image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 31,
+    name: "Cauliflower Wrap",
+    description: "Handmade roomali roti filled with lightly spiced cauliflower, potato & pea mix",
+    price: "₹40",
+    image: "https://images.unsplash.com/photo-1606851094291-6efae152bb87?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 32,
+    name: "Masala Meat Wrap",
+    description: "Roomali roti filled with pulled masala beef and a consommé dipping gravy",
+    price: "₹55",
+    image: "https://images.unsplash.com/photo-1567465645848-d9c40b76b5bd?w=800&auto=format&fit=crop",
+    category: "lunch",
+  },
+  {
+    id: 33,
+    name: "Chicken Tikka Wrap",
+    description: "Roomali roti filled with boneless chicken tikka, fresh herbs & cheese",
+    price: "₹40",
+    priceWithChai: "₹50 with fries",
+    image: "https://images.unsplash.com/photo-1607103058027-4c8a70a03e3a?w=800&auto=format&fit=crop",
+    category: "lunch",
   },
 ];
